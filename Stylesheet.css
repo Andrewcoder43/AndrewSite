@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Project Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project-box {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .thumbnail-container {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  .project-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .project-box:hover .project-thumbnail {
+    transform: scale(1.05);
+  }
+
+
+/* Buttons */
+#dark-mode-toggle,
+#new-post-button {
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover,
+#new-post-button:hover {
+    background-color: #555;
+}
+
+#dark-mode-toggle {
+    top: 20px;
+}
+
+#new-post-button {
+    top: 70px;
+}
+
+/* Popup and Overlay */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+.popup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #555;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.email-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .email-link:hover {
+    text-decoration: underline;
+  }
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+@media (max-width: 768px) {
+    .social-button {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .popup,
+.dark-mode .popup input[type="email"] {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode .popup input[type="email"] {
+    border-color: #555;
+}
+
+.dark-mode .social-button {
+    background-color: #555;
+}
+
+.dark-mode .social-button:hover {
+    background-color: #666;
+}
+
+.dark-mode .social-button svg {
+    fill: #fff;
+}
