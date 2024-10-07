@@ -5,7 +5,6 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
 }
 
 h1 {
@@ -50,7 +49,6 @@ h1 {
 .project-box:hover .project-thumbnail {
     transform: scale(1.05);
 }
-
 
 /* Buttons */
 #dark-mode-toggle,
@@ -182,27 +180,4 @@ footer {
         width: 20px;
         height: 20px;
     }
-}
-
-/* Dark Mode Adjustments */
-.dark-mode .popup,
-.dark-mode .popup input[type="email"] {
-    background-color: #444;
-    color: #fff;
-}
-
-.dark-mode .popup input[type="email"] {
-    border-color: #555;
-}
-
-.dark-mode .social-button {
-    background-color: #555;
-}
-
-.dark-mode .social-button:hover {
-    background-color: #666;
-}
-
-.dark-mode .social-button svg {
-    fill: #fff;
 }
