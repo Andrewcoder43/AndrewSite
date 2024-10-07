@@ -10,14 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Elements:', { darkModeToggle, newPostButton, emailPopup, overlay, subscribeButton, emailInput });
 
     if (darkModeToggle) {
+        console.log('Dark mode toggle found:', darkModeToggle);
+        
         darkModeToggle.addEventListener('click', () => {
             console.log('Dark mode toggle clicked');
             body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+            const isDarkMode = body.classList.contains('dark-mode');
+            console.log('Dark mode is now:', isDarkMode);
+            localStorage.setItem('darkMode', isDarkMode);
         });
-
+    
         // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'true') {
+        const savedDarkMode = localStorage.getItem('darkMode');
+        console.log('Saved dark mode preference:', savedDarkMode);
+        if (savedDarkMode === 'true') {
+            console.log('Applying dark mode from saved preference');
             body.classList.add('dark-mode');
         }
     }
